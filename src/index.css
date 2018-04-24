@@ -17,7 +17,7 @@ nav ul {
 nav li {
   float: right;
   font-size: 16px;
-  color: white;
+  color: #e9ebee;
   margin: 1em;
   vertical-align: middle;
   cursor: pointer;
@@ -25,4 +25,9 @@ nav li {
 
 nav li:first-child {
   float: left;
+}
+
+nav li a {
+  color: #e9ebee;
+  text-decoration: none;
 }
