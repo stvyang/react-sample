@@ -5,8 +5,8 @@ const Navigation = () => {
     <nav>
       <ul>
         <li>Bookpedia</li>
-        <li>Book</li>
-        <li>Customer</li>
+        <li>Access as Admin</li>
+        <li>Access as Customer</li>
       </ul>
     </nav>
   );
