@@ -6,6 +6,6 @@ const Admin = () => (
     <h3>Your books...</h3>
     <BookList />
   </div>
-)
+);
 
 export default Admin;
