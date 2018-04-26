@@ -6,8 +6,8 @@ const Navigation = () => (
     <nav>
       <ul>
         <li><Link to="/customer">Bookpedia</Link></li>
-        <li><Link to='/admin'>Access as Admin</Link></li>
-        <li><Link to='/customer'>Access as Customer</Link></li>
+        <li><Link to="/admin">Access as Admin</Link></li>
+        <li><Link to="/customer">Access as Customer</Link></li>
       </ul>
     </nav>
   </div>
