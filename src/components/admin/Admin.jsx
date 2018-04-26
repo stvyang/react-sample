@@ -2,7 +2,7 @@ import React from 'react';
 import BookList from './BookList';
 
 const Admin = () => (
-  <div>
+  <div id="admin">
     <h3>Your books...</h3>
     <BookList />
   </div>

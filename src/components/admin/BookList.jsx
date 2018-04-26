@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import PropTypes from 'prop-types';
 
-import { getBooks } from '../../queries';
+import getBooks from '../../queries';
 import Loading from '../global/Loading';
 import NotFound from '../global/NotFound';
 
@@ -22,20 +22,19 @@ class BookList extends Component {
 
   displayAllBook() {
     const { data } = this.props;
-    const allBooks = data.books.map(book => <li key={book.id}>{book.author}</li>);
-    return (
-      <ul>
-        {allBooks}
-      </ul>
-    );
+    const allBooks = data.books.map(book => {
+      return (
+        <div className="card" key={book.id}>
+          <div className="title">{book.title}</div>
+          <div>By {book.author}</div>
+        </div>
+      );
+    });
+    return allBooks;
   }
 
   render() {
-    return (
-      <div id="book-list">
-        {this.displayBooks()}
-      </div>
-    );
+    return <div id="book-list">{this.displayBooks()}</div>;
   }
 }
 

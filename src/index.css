@@ -45,7 +45,12 @@ nav li {
 }
 
 nav li:first-child {
+  margin: 1em 2em 1em 2em;
   float: left;
+}
+
+nav li:nth-child(2) {
+  margin-right: 2em;
 }
 
 nav li a {
@@ -54,5 +59,37 @@ nav li a {
 }
 
 #content {
-  margin-left: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+#book-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: inline-block;
+  padding: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  border: 1px #c5cbd3 solid;
+  width: 21.5%;
+  font-size: 11pt;
+}
+
+.card div {
+  margin-bottom: 2px;
+}
+
+.card .title {
+  color: #0366d6;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card .title:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
