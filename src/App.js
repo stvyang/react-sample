@@ -1,21 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+
 import Navigation from './components/Navigation';
 import Content from './components/Content';
 
-class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
-      <div>
+      <div id="main">
         <Navigation />
         <Content />
       </div>
     )
   }
 }
-
-App.propTypes = {
-  txt: PropTypes.String
-}
-
-export default App;
