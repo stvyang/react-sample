@@ -84,14 +84,17 @@ nav li a {
 }
 
 .card .title {
-  color: #0366d6;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.card .title:hover {
+.card .title a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.card .title a:hover {
   text-decoration: underline;
-  cursor: pointer;
 }
 
 .view > * {
