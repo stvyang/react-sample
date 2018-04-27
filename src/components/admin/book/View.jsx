@@ -15,14 +15,17 @@ const View = props => {
         <div>
           <h3 className="view-label">Author</h3>
           <span className="view-content">{props.data.book.author}</span>
+          <button className="view-button">Edit</button>
         </div>
         <div>
           <h3 className="view-label">Price</h3>
           <span className="view-content">{props.data.book.price}</span>
+          <button className="view-button">Edit</button>
         </div>
         <div>
           <h3 className="view-label">Stock</h3>
           <span className="view-content">{props.data.book.stock}</span>
+          <button className="view-button">Edit</button>
         </div>
       </div>
     );

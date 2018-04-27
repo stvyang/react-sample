@@ -27,6 +27,23 @@ p {
   font-weight: 400;
 }
 
+button {
+  font-family: Raleway;
+  color: white;
+  background-color: #643b1b;
+  padding: 5px 10px 5px 10px;
+  border: none;
+}
+
+button:hover {
+  background-color: #502f16;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #3c2310;
+}
+
 nav ul {
   background-color: #502f16;
   margin: 0;
@@ -113,4 +130,10 @@ nav li a {
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.view-button {
+  float: right;
+  position: relative;
+  transform: translateY(35%);
 }
