@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-import getBooks from '../../queries';
+import { getBooks } from '../../queries';
 import Loading from '../global/Loading';
 import NotFound from '../global/NotFound';
-
-const dataName = 'book';
 
 class BookList extends Component {
   displayBooks() {
@@ -16,16 +15,18 @@ class BookList extends Component {
     } else if (data.books.length > 0) {
       return this.displayAllBook();
     } else {
-      return <NotFound name={dataName} />;
+      return <NotFound name="Unfortunately, you did not have any book yet." />;
     }
   }
 
   displayAllBook() {
-    const { data } = this.props;
+    const { data, match } = this.props;
     const allBooks = data.books.map(book => {
       return (
         <div className="card" key={book.id}>
-          <div className="title">{book.title}</div>
+          <div className="title">
+            <Link to={`${match.url}/book/${book.id}`}>{book.title}</Link>
+          </div>
           <div>By {book.author}</div>
         </div>
       );
@@ -34,12 +35,18 @@ class BookList extends Component {
   }
 
   render() {
-    return <div id="book-list">{this.displayBooks()}</div>;
+    return (
+      <div>
+        <h3>Your books...</h3>
+        <div id="book-list">{this.displayBooks()}</div>
+      </div>
+    );
   }
 }
 
 BookList.propTypes = {
   data: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
 };
 
 export default graphql(getBooks)(BookList);
