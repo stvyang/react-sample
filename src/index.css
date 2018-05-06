@@ -136,4 +136,14 @@ nav li a {
   float: right;
   position: relative;
   transform: translateY(35%);
+  margin-left: 10px;
+}
+
+.view-input {
+  font-family: Raleway;
+  font-size: 1em;
+  padding: 6px 8px;
+  width: 500px;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
 }
