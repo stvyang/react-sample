@@ -21,4 +21,10 @@ const getBookById = gql`
   }
 `;
 
-export { getBooks, getBookById };
+const updateBookById = gql`
+  mutation($id: ID!, $title: String, $author: String, $price: Float, $stock: Int) {
+    updateBook(id: $id, data: { title: $title, author: $author, price: $price, stock: $stock })
+  }
+`;
+
+export { getBooks, getBookById, updateBookById };
