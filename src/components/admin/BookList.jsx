@@ -13,7 +13,12 @@ class BookList extends Component {
     if (data.loading) {
       return <Loading />;
     } else if (data.books.length > 0) {
-      return this.displayAllBook();
+      return (
+        <div>
+          <h3>Books</h3>
+          <div id="book-list">{this.displayAllBook()}</div>
+        </div>
+      );
     } else {
       return <NotFound name="Unfortunately, you did not have any book yet." />;
     }
@@ -35,12 +40,7 @@ class BookList extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <h3>Your books...</h3>
-        <div id="book-list">{this.displayBooks()}</div>
-      </div>
-    );
+    return this.displayBooks();
   }
 }
 
