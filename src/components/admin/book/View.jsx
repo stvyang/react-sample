@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 import { compose, graphql } from 'react-apollo';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import { getBookById, updateBookById } from '../../../queries';
+import { getBookById, updateBookById, deleteBookById } from '../../../queries';
 import Loading from '../../global/Loading';
 import NotFound from '../../global/NotFound';
 import Header from '../../global/view/Header';
 import Record from '../../global/view/Record';
+import Delete from '../../global/view/Delete';
 
 class View extends Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.saveTitle = this.saveTitle.bind(this);
     this.saveAuthor = this.saveAuthor.bind(this);
     this.savePrice = this.savePrice.bind(this);
     this.saveStock = this.saveStock.bind(this);
+    this.deleteBook = this.deleteBook.bind(this);
   }
 
   async saveTitle(newTitle) {
@@ -57,6 +59,15 @@ class View extends Component {
     await this.props.data.refetch();
   }
 
+  async deleteBook() {
+    await this.props.deleteBookById({
+      variables: {
+        id: this.props.match.params.id,
+      },
+    });
+    this.props.history.push('/admin');
+  }
+
   displayBook() {
     if (this.props.data.loading) {
       return <Loading />;
@@ -72,6 +83,7 @@ class View extends Component {
           />
           <Record label="Price" content={this.props.data.book.price} saveContent={this.savePrice} />
           <Record label="Stock" content={this.props.data.book.stock} saveContent={this.saveStock} />
+          <Delete dataType="book" deleteData={this.deleteBook} />
         </div>
       );
     } else {
@@ -100,7 +112,11 @@ View.propTypes = {
       id: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
   updateBookById: PropTypes.func.isRequired,
+  deleteBookById: PropTypes.func.isRequired,
 };
 
 export default compose(
@@ -110,4 +126,5 @@ export default compose(
     }),
   }),
   graphql(updateBookById, { name: 'updateBookById' }),
+  graphql(deleteBookById, { name: 'deleteBookById' }),
 )(View);

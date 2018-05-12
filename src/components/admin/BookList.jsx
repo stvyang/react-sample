@@ -57,4 +57,8 @@ BookList.propTypes = {
   }).isRequired,
 };
 
-export default graphql(getBooks)(BookList);
+export default graphql(getBooks, {
+  options: {
+    fetchPolicy: 'network-only',
+  },
+})(BookList);

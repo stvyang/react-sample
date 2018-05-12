@@ -3,7 +3,6 @@ body {
   padding: 0;
   font-family: Raleway;
   background-color: #e9ebee;
-  /* background-color: #faf1eb; */
 }
 
 h1 {
@@ -42,6 +41,18 @@ button:hover {
 
 button:active {
   background-color: #3c2310;
+}
+
+.button-danger {
+  background-color: #d1332e;
+}
+
+.button-danger:hover {
+  background-color: #bc2e29;
+}
+
+.button-danger:active {
+  background-color: #a72925;
 }
 
 nav ul {
@@ -114,13 +125,14 @@ nav li a {
   text-decoration: underline;
 }
 
-.view > * {
-  border-bottom: 1px #d9d9d9 solid;
-}
-
 .view-header {
   margin-bottom: 0;
   padding-bottom: 20px;
+  border-bottom: 1px #d9d9d9 solid;
+}
+
+.view-record {
+  border-bottom: 1px #d9d9d9 solid;
 }
 
 .view-label {
@@ -146,6 +158,12 @@ nav li a {
   width: 500px;
   border: 1px solid #d1d5da;
   border-radius: 3px;
+}
+
+.view-delete {
+  padding: 20px 0px;
+  width: fit-content;
+  margin: auto;
 }
 
 .loading {

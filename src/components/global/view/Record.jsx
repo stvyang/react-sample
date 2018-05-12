@@ -30,7 +30,7 @@ class Record extends Component {
   render() {
     if (this.state.onEdit) {
       return (
-        <div>
+        <div className="view-record">
           <h3 className="view-label">{this.props.label}</h3>
           <input
             className="view-input"
@@ -48,7 +48,7 @@ class Record extends Component {
       );
     } else {
       return (
-        <div>
+        <div className="view-record">
           <h3 className="view-label">{this.props.label}</h3>
           <span className="view-content">{this.props.content}</span>
           <button className="view-button" onClick={this.toggleEdit}>
