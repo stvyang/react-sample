@@ -15,7 +15,7 @@ class BookList extends Component {
     } else if (data.books.length > 0) {
       return (
         <div>
-          <h3>Books</h3>
+          <h3>Book List</h3>
           <div id="book-list">{this.displayAllBook()}</div>
         </div>
       );
@@ -45,8 +45,16 @@ class BookList extends Component {
 }
 
 BookList.propTypes = {
-  data: PropTypes.object.isRequired,
-  match: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    books: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+    })),
+  }).isRequired,
+  match: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default graphql(getBooks)(BookList);
