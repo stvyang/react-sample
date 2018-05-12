@@ -6,7 +6,6 @@ import View from './book/View';
 
 const Admin = props => {
   const { match } = props;
-
   return (
     <div id="admin">
       <Switch>
@@ -18,7 +17,9 @@ const Admin = props => {
 };
 
 Admin.propTypes = {
-  match: PropTypes.object.isRequired,
+  match: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Admin;

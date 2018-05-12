@@ -22,8 +22,8 @@ class Record extends Component {
     });
   }
 
-  sendContent() {
-    this.props.saveContent(this.state.content);
+  async sendContent() {
+    await this.props.saveContent(this.state.content);
     this.toggleEdit();
   }
 
@@ -62,7 +62,7 @@ class Record extends Component {
 
 Record.propTypes = {
   label: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   saveContent: PropTypes.func.isRequired,
 };
 
