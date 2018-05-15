@@ -32,6 +32,7 @@ button {
   background-color: #643b1b;
   padding: 5px 10px 5px 10px;
   border: none;
+  margin-right: 10px;
 }
 
 button:hover {
@@ -41,6 +42,18 @@ button:hover {
 
 button:active {
   background-color: #3c2310;
+}
+
+.button-primary {
+  background-color: #8c5226;
+}
+
+.button-primary:hover {
+  background-color: #784721;
+}
+
+.button-primary:active {
+  background-color: #643b1b;
 }
 
 .button-danger {
@@ -81,17 +94,18 @@ nav li:nth-child(2) {
   margin-right: 2em;
 }
 
-nav li a {
+.a-primary {
   color: #e9ebee;
   text-decoration: none;
 }
 
-#content {
+.content {
   margin-left: 2em;
   margin-right: 2em;
 }
 
-#book-list {
+.card-list {
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -123,6 +137,35 @@ nav li a {
 
 .card .title a:hover {
   text-decoration: underline;
+}
+
+.create-form {
+  margin: 10px auto;
+  width: 50%;
+}
+
+.create-form>.actions {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.create-label {
+  display: inline-block;
+  width: 30%;
+  color: #68727d;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.create-input {
+  font-family: Raleway;
+  font-size: 1em;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  width: 70%;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
 }
 
 .view-header {

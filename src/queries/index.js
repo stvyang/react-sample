@@ -1,5 +1,14 @@
 import { gql } from 'apollo-boost';
 
+const createBook = gql`
+  mutation($title: String!, $author: String!, $price: Float!, $stock: Int!) {
+    createBook(data: { title: $title, author: $author, price: $price, stock: $stock }) {
+      title
+      author
+    }
+  }
+`;
+
 const getBooks = gql`
   {
     books {
@@ -33,4 +42,4 @@ const deleteBookById = gql`
   }
 `;
 
-export { getBooks, getBookById, updateBookById, deleteBookById };
+export { createBook, getBooks, getBookById, updateBookById, deleteBookById };

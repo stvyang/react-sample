@@ -9,14 +9,19 @@ import NotFound from '../global/NotFound';
 
 class BookList extends Component {
   displayBooks() {
-    const { data } = this.props;
+    const { data, match } = this.props;
     if (data.loading) {
       return <Loading />;
     } else if (data.books.length > 0) {
       return (
         <div>
           <h3>Book List</h3>
-          <div id="book-list">{this.displayAllBook()}</div>
+          <button className="button-primary">
+            <Link className="a-primary" to={`${match.url}/create`}>
+              Create New
+            </Link>
+          </button>
+          <div className="card-list">{this.displayAllBook()}</div>
         </div>
       );
     } else {
