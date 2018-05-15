@@ -11,7 +11,7 @@ const client = new ApolloClient({
 });
 const Content = () => (
   <ApolloProvider client={client}>
-    <div id="content">
+    <div className="content">
       <Switch>
         <Route path="/customer" component={Customer} />
         <Route path="/admin" component={Admin} />
