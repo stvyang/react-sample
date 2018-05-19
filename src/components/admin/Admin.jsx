@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import BookList from './BookList';
+import List from './book/List';
 import Create from './book/Create';
 import View from './book/View';
 
@@ -10,7 +10,7 @@ const Admin = props => {
   return (
     <div id="admin">
       <Switch>
-        <Route exact path={`${match.url}/`} component={BookList} />
+        <Route exact path={`${match.url}/`} component={List} />
         <Route path={`${match.url}/create`} component={Create} />
         <Route path={`${match.url}/book/:id`} component={View} />
       </Switch>

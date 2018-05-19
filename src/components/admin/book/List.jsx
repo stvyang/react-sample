@@ -3,11 +3,11 @@ import { graphql } from 'react-apollo';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { getBooks } from '../../queries';
-import Loading from '../global/Loading';
-import NotFound from '../global/NotFound';
+import { getBooks } from '../../../queries';
+import Loading from '../../global/Loading';
+import NotFound from '../../global/NotFound';
 
-class BookList extends Component {
+class List extends Component {
   displayBooks() {
     const { data, match } = this.props;
     if (data.loading) {
@@ -49,7 +49,7 @@ class BookList extends Component {
   }
 }
 
-BookList.propTypes = {
+List.propTypes = {
   data: PropTypes.shape({
     books: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -66,4 +66,4 @@ export default graphql(getBooks, {
   options: {
     fetchPolicy: 'network-only',
   },
-})(BookList);
+})(List);
