@@ -1,33 +1,33 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans';
+  font-family: 'Segoe UI';
   background-color: #e9ebee;
 }
 
 h1 {
-  font-family: 'Open Sans';
+  font-family: 'Segoe UI';
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
 }
 
 h3 {
-  font-family: 'Open Sans';
+  font-family: 'Segoe UI';
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
 }
 
 p {
-  font-family: 'Open Sans';
+  font-family: 'Segoe UI';
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
 }
 
 button {
-  font-family: 'Open Sans';
+  font-family: 'Segoe UI';
   color: white;
   background-color: #643b1b;
   padding: 5px 10px 5px 10px;
@@ -159,7 +159,7 @@ nav li:nth-child(2) {
 }
 
 .create-input {
-  font-family: 'Open Sans';
+  font-family: 'Segoe UI';
   font-size: 1em;
   box-sizing: border-box;
   padding: 6px 8px;
@@ -195,7 +195,7 @@ nav li:nth-child(2) {
 }
 
 .view-input {
-  font-family: 'Open Sans';
+  font-family: 'Segoe UI';
   font-size: 1em;
   padding: 6px 8px;
   width: 500px;
