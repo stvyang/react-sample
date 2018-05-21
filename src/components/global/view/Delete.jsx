@@ -11,7 +11,7 @@ const Delete = props => {
   }
   return (
     <div className="view-delete">
-      <button className="button-danger" onClick={confirmDelete}>
+      <button className="btn-danger" onClick={confirmDelete}>
         Delete
       </button>
     </div>

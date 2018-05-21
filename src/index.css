@@ -35,27 +35,27 @@ button:active {
   background-color: #3c2310;
 }
 
-.button-primary {
-  background-color: #8c5226;
+.btn-primary {
+  background-color: #04C2B1;
 }
 
-.button-primary:hover {
-  background-color: #784721;
+.btn-primary:hover {
+  background-color: #04afa1;
 }
 
-.button-primary:active {
-  background-color: #643b1b;
+.btn-primary:active {
+  background-color: #03968a;
 }
 
-.button-danger {
+.btn-danger {
   background-color: #d1332e;
 }
 
-.button-danger:hover {
+.btn-danger:hover {
   background-color: #bc2e29;
 }
 
-.button-danger:active {
+.btn-danger:active {
   background-color: #a72925;
 }
 
@@ -161,8 +161,8 @@ nav li:nth-child(2) {
 }
 
 .view-header {
-  margin-bottom: 0;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px #d9d9d9 solid;
 }
 
@@ -234,4 +234,59 @@ nav li:nth-child(2) {
   100% {
     transform: rotate(360deg);
   }
+}
+
+table thead tr th, table tbody tr td {
+  padding: 10px 5px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.table th {
+  text-align: center;
+  background-color: #502f16;
+  color: white;
+  font-weight: 500;
+  border: 1px #d9d9d9 solid;
+}
+
+.table td {
+  border: 1px #d9d9d9 solid;
+}
+
+.btn-table {
+  margin: 0px 10px;
+  width: 60%;
+}
+
+.td-action {
+  width: 5%;
+}
+
+.td-input input[type=text], .td-input input[type=number], .td-input textarea, .td-input select {
+  font-size: 1em;
+  font-family: 'Segoe UI';
+  display: inline-block;
+  box-sizing: border-box;
+  width: calc(100% - 10px);
+  padding: 5px 5px;
+  margin: 0px 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#col-book {
+  width: 60%;
+}
+
+#col-quantity {
+  width: 35%;
+}
+
+.text-center {
+  text-align: center;
 }

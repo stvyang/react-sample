@@ -16,7 +16,7 @@ class List extends Component {
       return (
         <div>
           <h3>Book List</h3>
-          <button className="button-primary">
+          <button>
             <Link className="a-primary" to={`${match.url}/create`}>
               Create New
             </Link>
