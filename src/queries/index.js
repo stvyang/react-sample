@@ -42,4 +42,13 @@ const deleteBookById = gql`
   }
 `;
 
-export { createBook, getBooks, getBookById, updateBookById, deleteBookById };
+const placeOrder = gql`
+  mutation($orderDetails: [OrderDetailInput]!) {
+    createOrder(data: { orderDetails: $orderDetails }) {
+      id
+      customerName
+    }
+  }
+`;
+
+export { createBook, getBooks, getBookById, updateBookById, deleteBookById, placeOrder };
