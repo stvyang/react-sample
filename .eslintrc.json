@@ -19,9 +19,16 @@
         },
         "allowChildren": false
       }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/setupTests.js", "**/*.test.js", "**/*.spec.js"]
+      }
     ]
   },
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true
   }
 }
