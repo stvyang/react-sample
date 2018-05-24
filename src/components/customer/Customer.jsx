@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Dashboard from './Dashboard';
 import Create from './order/Create';
+import View from './order/View';
 
 const Customer = props => {
   const { match } = props;
@@ -11,6 +12,7 @@ const Customer = props => {
       <Switch>
         <Route exact path={`${match.url}/`} component={Dashboard} />
         <Route path={`${match.url}/order/create`} component={Create} />
+        <Route path={`${match.url}/order/:id`} component={View} />
       </Switch>
     </div>
   );
