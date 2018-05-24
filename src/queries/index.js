@@ -51,4 +51,47 @@ const placeOrder = gql`
   }
 `;
 
-export { createBook, getBooks, getBookById, updateBookById, deleteBookById, placeOrder };
+const getOrders = gql`
+  {
+    orders {
+      id
+      orderDate
+      totalPayment
+    }
+  }
+`;
+
+const getOrderById = gql`
+  query($id: ID!) {
+    order(id: $id) {
+      id
+      orderDate
+      totalPayment
+      orderDetails {
+        id
+        book {
+          title
+        }
+        quantity
+      }
+    }
+  }
+`;
+
+const deleteOrderById = gql`
+  mutation($id: ID!) {
+    deleteOrder(id: $id)
+  }
+`;
+
+export {
+  createBook,
+  getBooks,
+  getBookById,
+  updateBookById,
+  deleteBookById,
+  placeOrder,
+  getOrders,
+  getOrderById,
+  deleteOrderById,
+};
