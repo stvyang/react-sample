@@ -23,7 +23,7 @@ button {
   background-color: #643b1b;
   padding: 5px 10px 5px 10px;
   border: none;
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
 }
 
 button:hover {
@@ -96,7 +96,6 @@ nav li:nth-child(2) {
 }
 
 .card-list {
-  margin-top: 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -117,17 +116,17 @@ nav li:nth-child(2) {
   margin-bottom: 2px;
 }
 
-.card .title {
+.title {
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.card .title a {
+.title a {
   color: #0366d6;
   text-decoration: none;
 }
 
-.card .title a:hover {
+.title a:hover {
   text-decoration: underline;
 }
 
@@ -136,9 +135,11 @@ nav li:nth-child(2) {
   width: 50%;
 }
 
-.create-form>.actions {
-  margin: 10px auto;
+.actions {
   text-align: center;
+  padding: 20px 0px;
+  width: fit-content;
+  margin: auto;
 }
 
 .create-label {
@@ -168,6 +169,7 @@ nav li:nth-child(2) {
 
 .view-record {
   border-bottom: 1px #d9d9d9 solid;
+  padding: 10px 0px;
 }
 
 .view-label {
@@ -246,6 +248,10 @@ table thead tr th, table tbody tr td {
   margin: 20px 0px;
 }
 
+.table thead tr {
+  width: 100%
+}
+
 .table th {
   text-align: center;
   background-color: #502f16;
@@ -289,4 +295,51 @@ table thead tr th, table tbody tr td {
 
 .text-center {
   text-align: center;
+}
+
+.order-board {
+  margin-top: 5px;
+  width: 50%;
+  border: 1px solid #ccc;
+}
+
+.order-card {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1em;
+  margin: 1em;
+  border: 1px #c5cbd3 solid;
+  width: calc(50% - 2em);
+}
+
+#order-total {
+  float: right;
+}
+
+#order-date {
+  float: left;
+}
+
+.view-form {
+  margin: 10px auto;
+  width: 75%;
+}
+
+.view-form-record {
+  border-bottom: 1px #d9d9d9 solid;
+  padding: 10px 0px;
+}
+
+.view-form-record>* {
+  width: 70%;
+  display: inline-block;
+}
+
+.view-form-record>label {
+  width: 30%;
+  vertical-align: top;
+}
+
+.view-form-record>table {
+  display: inline-table;
 }
